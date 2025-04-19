@@ -1,0 +1,10 @@
+services:
+  secure_app:
+    image: secure_env_demo
+    env_file: .env
+    secrets:
+      - app_token
+
+secrets:
+  app_token:
+    file: ./secret.txt
